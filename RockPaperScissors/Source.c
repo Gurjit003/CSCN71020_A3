@@ -46,4 +46,28 @@ char *RockPaperScissors(char input1[], char input2[])
 	{
 		return "Player1";
 	}
+
+	// For Scissors and Rock input (Rock/Player2 wins)
+	a = strcmp(input1, "Scissors");
+	b = strcmp(input2, "Rock");
+	if ((a == 0) && (b == 0))
+	{
+		return "Player2";
+	}
+
+	// For Rock and Scissors input (Rock/Player1 wins)
+	a = strcmp(input1, "Rock");
+	b = strcmp(input2, "Scissors");
+	if ((a == 0) && (b == 0))
+	{
+		return "Player1";
+	}
+
+	// For Rock and Rock input (Same shape so draw)
+	a = strcmp(input1, "Rock");
+	b = strcmp(input2, "Rock");
+	if ((a == 0) && (b == 0))
+	{
+		return "Draw";
+	}
 }
