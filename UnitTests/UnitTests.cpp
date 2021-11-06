@@ -104,5 +104,44 @@ namespace UnitTests
 			//assert
 			Assert::AreEqual(EXPECTED, result);
 		}
+		TEST_METHOD(PaperAndPaper) // Paper and Paper input (Check for Draw as same shapes)
+		{
+			//arrange
+			char input1[] = "Paper";
+			char input2[] = "Paper";
+			int EXPECTED = 0;
+
+			//act
+			int result = strcmp(RockPaperScissors(input1, input2), "Draw");
+
+			//assert
+			Assert::AreEqual(EXPECTED, result);
+		}
+		TEST_METHOD(ScissorsAndScissors) // Scissors and Scissors input (Check for Draw as same shapes)
+		{
+			//arrange
+			char input1[] = "Scissors";
+			char input2[] = "Scissors";
+			int EXPECTED = 0;
+
+			//act
+			int result = strcmp(RockPaperScissors(input1, input2), "Draw");
+
+			//assert
+			Assert::AreEqual(EXPECTED, result);
+		}
+		TEST_METHOD(rockAndPaper) // rock and Paper input (Check for Invalid as rock instead of Rock)
+		{
+			//arrange
+			char input1[] = "rock";
+			char input2[] = "Paper";
+			int EXPECTED = 0;
+
+			//act
+			int result = strcmp(RockPaperScissors(input1, input2), "Invalid");
+
+			//assert
+			Assert::AreEqual(EXPECTED, result);
+		}
 	};
 }

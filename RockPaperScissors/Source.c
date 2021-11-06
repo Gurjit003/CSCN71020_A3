@@ -70,4 +70,24 @@ char *RockPaperScissors(char input1[], char input2[])
 	{
 		return "Draw";
 	}
+
+	// For Paper and Paper input (Same shape so draw)
+	a = strcmp(input1, "Paper");
+	b = strcmp(input2, "Paper");
+	if ((a == 0) && (b == 0))
+	{
+		return "Draw";
+	}
+
+	// For Scissors and Scissors input (Same shape so draw)
+	a = strcmp(input1, "Scissors");
+	b = strcmp(input2, "Scissors");
+	if ((a == 0) && (b == 0))
+	{
+		return "Draw";
+	}
+	else
+	{
+		return "Invalid"; // For inputs other than Rock, Paper, or Scissors 
+	}	                  // Includes numbers, other words, correct input but wrong format (rock instead of Rock) 
 }
