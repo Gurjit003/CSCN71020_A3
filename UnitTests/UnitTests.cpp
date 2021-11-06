@@ -143,5 +143,44 @@ namespace UnitTests
 			//assert
 			Assert::AreEqual(EXPECTED, result);
 		}
+		TEST_METHOD(paperAndscissors) // paper and scissors input (Check for Invalid as paper instead of Paper and scissors instead of Scissors)
+		{
+			//arrange
+			char input1[] = "paper";
+			char input2[] = "scissors";
+			int EXPECTED = 0;
+
+			//act
+			int result = strcmp(RockPaperScissors(input1, input2), "Invalid");
+
+			//assert
+			Assert::AreEqual(EXPECTED, result);
+		}
+		TEST_METHOD(pAndR) // p and R input (Check for Invalid as both inputs other than Rock, Paper, or Scissors)
+		{
+			//arrange
+			char input1[] = "p";
+			char input2[] = "R";
+			int EXPECTED = 0;
+
+			//act
+			int result = strcmp(RockPaperScissors(input1, input2), "Invalid");
+
+			//assert
+			Assert::AreEqual(EXPECTED, result);
+		}
+		TEST_METHOD(numbers) // positive numbers input (Check for Invalid as both inputs other than Rock, Paper, or Scissors)
+		{
+			//arrange
+			char input1[] = "1";
+			char input2[] = "2";
+			int EXPECTED = 0;
+
+			//act
+			int result = strcmp(RockPaperScissors(input1, input2), "Invalid");
+
+			//assert
+			Assert::AreEqual(EXPECTED, result);
+		}
 	};
 }
