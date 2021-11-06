@@ -182,5 +182,31 @@ namespace UnitTests
 			//assert
 			Assert::AreEqual(EXPECTED, result);
 		}
+		TEST_METHOD(negativeAndZero) // negative number and zero input (Check for Invalid as both inputs other than Rock, Paper, or Scissors)
+		{
+			//arrange
+			char input1[] = "-1";
+			char input2[] = "0";
+			int EXPECTED = 0;
+
+			//act
+			int result = strcmp(RockPaperScissors(input1, input2), "Invalid");
+
+			//assert
+			Assert::AreEqual(EXPECTED, result);
+		}
+		TEST_METHOD(negativeNumbers) // negative numbers (Check for Invalid as both inputs other than Rock, Paper, or Scissors)
+		{
+			//arrange
+			char input1[] = "-1";
+			char input2[] = "-10";
+			int EXPECTED = 0;
+
+			//act
+			int result = strcmp(RockPaperScissors(input1, input2), "Invalid");
+
+			//assert
+			Assert::AreEqual(EXPECTED, result);
+		}
 	};
 }
